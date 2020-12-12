@@ -3,12 +3,9 @@
 Repositório utilizado durante o curso Semana Agilizei 2.0
 
   - cypress
-  - xpath
-  - page objects
-  - teste funcional
-  - API
-  - teste de interface
-
+  - mapeando elementos com comandos nativos
+  - modo headless
+  
 # Comandos para instalação do cypress:
 ```sh
   > git init    
