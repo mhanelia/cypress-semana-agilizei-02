@@ -11,6 +11,12 @@ Repositório utilizado durante o curso Semana Agilizei 2.0
   > git init    
   > npm init -y   
   > npm install -D cypress
+  > npm install -D cypress-multi-reporters
+  > npm install -D mocha
+  > npm install -D mochawesome
+  > npm install -D mochawesome-merge
+  > npm install -D mochawesome-report-generator
+  > npm install -D rimraf
 ```
 
 # Anotações durante o curso: backgroundLogin
@@ -19,6 +25,11 @@ Expressão: /[A-Z][A-Z]+/g - pega todas as palavas iniciadas e terminadas com le
 ultímo caractere e o g é que caso tenha mais de uma palavra que se encaixe no contexto, ele traz todas;
 Usar o index.d.ts para adicionar comandos personalizados ao autocompletar;
 
+cypress-multi-reporters - permite ocnfigurar mais de um relatório por projeto;
+mocha - biblioteca para execução dos testes;
+mochawesome - biblioteca responsável responsável por gerar os arquivos .json usados o report html;
+mochawesome-merge - merge dos arquivos json gerados pelo mochawesome ->  arquivo_final.json;
+mochawesome-report-generator - gerar o relatório em html usando os arquivos gerados (json)
 
 
 
