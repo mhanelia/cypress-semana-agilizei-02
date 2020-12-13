@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-12-13T20:07:42.123Z",
-    "end": "2020-12-13T20:07:57.242Z",
-    "duration": 15119,
+    "start": "2020-12-13T20:10:24.062Z",
+    "end": "2020-12-13T20:10:43.999Z",
+    "duration": 19937,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "434a56ac-9b98-418b-8f20-432657c4437e",
+      "uuid": "7e2b046b-20a7-40f4-b917-7c0d3972741a",
       "title": "",
       "fullFile": "cypress/integration/compre.spec.js",
       "file": "cypress/integration/compre.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c66bddc8-bfe4-4b04-9e7c-43f25fac092b",
+          "uuid": "74b7d169-a55f-4b91-a1b6-fcc693b0762b",
           "title": "Compra",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Efetuar uma compra de produto",
               "fullTitle": "Compra Efetuar uma compra de produto",
               "timedOut": null,
-              "duration": 14971,
+              "duration": 19843,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.backgroundLogin();\ncy.visit('/');\nvar nomeProduto = 'Faded Short Sleeve T-shirts';\ncy.contains(nomeProduto).trigger('mouseover');\ncy.contains('Faded Short Sleeve T-shirts') //identifica qual elemento baseado no texto\n.parent() // navega até o elemento pai que é o h5\n.siblings('div.button-container') // identifica todos os irmãos do pai ou tios do elemento com a classe button-container \n.children('a') // identifica todos os filhos com link\n.first() //e pega o primeito item (add to card)\n.click();\ncy.get('.icon-ok').parent() //h2\n.should('contain.text', 'Product successfully added to your shopping cart');\ncy.get('span#layer_cart_product_title').should('contain.text', nomeProduto);\ncy.get(\".button-container a[href$='controller=order']\").click();\ncy.get(\".cart_navigation a[href$='order&step=1']\").click(); // cy.get('#email').type('semana-agilizei@mail.com')\n// cy.get('#passwd').type('12345')\n// cy.get('button#SubmitLogin').click()\n//validando se o endereço de entrega é igual ao da cobrança\n// asserção | atributo | valor  \ncy.get('[type=checkbox]#addressesAreEquals').should('have.attr', 'checked', 'checked');\ncy.get('button[name=processAddress]').click();\ncy.get('[type=checkbox]#cgv').check();\ncy.get('button[name=processCarrier').click();\ncy.get('.bankwire').click();\ncy.get('.cart_navigation button[type=submit]').find('span').contains('I confirm my order').click();\ncy.get('.cheque-indent  strong').should('contain.text', 'Your order on My Store is complete');\ncy.get('div.box').invoke('text').then(function (text) {\n  console.log(text); // escrita de um arquivo json com o conteudo do pedido\n  // caminho do arquivo (sempre a partir da pasta raiz) | conteúdo do arquivo\n  cy.writeFile('cypress/fixtures/pedido.json', {\n    id: \"\".concat(text.match(/[A-Z][A-Z]+/g)[1])\n  });\n  cy.get(\".cart_navigation a[href$='history'\").click(); //leitura de um arquivo\n  cy.readFile('cypress/fixtures/pedido.json').then(function (pedido) {\n    cy.get('tr.first_item .history_link a').should('contain.text', pedido.id);\n  });\n});",
               "err": {},
-              "uuid": "14bba9d4-a8dd-454e-8c8c-e0c92455f94a",
-              "parentUUID": "c66bddc8-bfe4-4b04-9e7c-43f25fac092b",
+              "uuid": "3d78335d-f194-4b54-b391-e3abd0d22954",
+              "parentUUID": "74b7d169-a55f-4b91-a1b6-fcc693b0762b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "14bba9d4-a8dd-454e-8c8c-e0c92455f94a"
+            "3d78335d-f194-4b54-b391-e3abd0d22954"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 14971,
+          "duration": 19843,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
